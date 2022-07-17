@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sonrie a la cámara"
+        android:text="@string/hello"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,22 +21,40 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="171dp"
-        android:layout_height="156dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="289dp"
+        android:layout_height="299dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:ignore="ImageContrastCheck"
+        android:src="@mipmap/ic_launcher" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="86dp"
-        android:layout_height="42dp"
+        android:layout_width="123dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/foto"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.51"
         app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.511" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
